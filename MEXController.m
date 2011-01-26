@@ -52,11 +52,28 @@
 			NSString *path = [NSString stringWithFormat:@"%@Icon@2x.png", selectedDirectory];
 			NSURL *url = [NSURL URLWithString:path];
 			[MEXImageTools savePNGImage:[MEXImageTools imageWithImage:[imageView image] scaledToSize:size] toPath:url];
+			size.width = 58;
+			size.height = 58;
+			path = [NSString stringWithFormat:@"%@Icon-Small@2x.png", selectedDirectory];
+			url = [NSURL URLWithString:path];
+			[MEXImageTools savePNGImage:[MEXImageTools imageWithImage:[imageView image] scaledToSize:size] toPath:url];
 		}
 		if ([ipadCbox state] == NSOnState) {
 			size.width = 72;
 			size.height = 72;
 			NSString *path = [NSString stringWithFormat:@"%@Icon-iPad.png", selectedDirectory];
+			NSURL *url = [NSURL URLWithString:path];
+			[MEXImageTools savePNGImage:[MEXImageTools imageWithImage:[imageView image] scaledToSize:size] toPath:url];
+			size.width = 50;
+			size.height = 50;
+			path = [NSString stringWithFormat:@"%@Icon-Small-50.png", selectedDirectory];
+			url = [NSURL URLWithString:path];
+			[MEXImageTools savePNGImage:[MEXImageTools imageWithImage:[imageView image] scaledToSize:size] toPath:url];
+		}
+		if ([ipadCbox state] == NSOnState || [normalCbox state] == NSOnState) {
+			size.width = 29;
+			size.height = 29;
+			NSString *path = [NSString stringWithFormat:@"%@Icon-Small.png", selectedDirectory];
 			NSURL *url = [NSURL URLWithString:path];
 			[MEXImageTools savePNGImage:[MEXImageTools imageWithImage:[imageView image] scaledToSize:size] toPath:url];
 		}

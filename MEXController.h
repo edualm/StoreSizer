@@ -10,7 +10,7 @@
 #import "ImageDragView.h"
 #import "MEXImageTools.h"
 
-@interface MEXController : NSObject <NSApplicationDelegate, NSWindowDelegate> {
+@interface MEXController : NSObject <NSWindowDelegate> {
 	NSWindow *window;
 	IBOutlet NSButton *normalCbox;
 	IBOutlet NSButton *retinaCbox;
